@@ -9,7 +9,7 @@ export type KeyValueStoreType = {
 
 type ReadOutcomeType = { raw: unknown[]; notice: null } | { raw: null; notice: string };
 
-export const APPOINTMENTS_KEY = "honeycomb.appointments.v1";
+export const APPOINTMENTS_KEY = "honeyvale.appointments.v1";
 
 export function createMemoryStore(): KeyValueStoreType {
   const entries = new Map<string, string>();
@@ -95,8 +95,8 @@ export function saveAppointments(store: KeyValueStoreType, appointments: readonl
 export function openBrowserStore(): { store: KeyValueStoreType; notice: string | null } {
   try {
     const browserStore = window.localStorage;
-    browserStore.setItem("honeycomb.probe", "1");
-    browserStore.removeItem("honeycomb.probe");
+    browserStore.setItem("honeyvale.probe", "1");
+    browserStore.removeItem("honeyvale.probe");
     return { store: browserStore, notice: null };
   } catch {
     return { store: createMemoryStore(), notice: "This browser blocks local storage, so appointments only last until you close the tab." };

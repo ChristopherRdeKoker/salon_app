@@ -2,7 +2,7 @@ import { hexPoints } from "@/art/hex";
 
 export function HeroArt() {
   return (
-    <svg className="hero-art" viewBox="0 0 400 440" role="img" aria-label="Illustration of a nail polish bottle, a frangipani flower and a curled lash on a blush arch, with small gold honeycomb cells">
+    <svg className="hero-art" viewBox="0 0 400 440" role="img" aria-label="Illustration of a nail polish bottle, a frangipani flower and a curled lash on a blush arch, with small gold hexagon cells">
       <path className="art-arch" d="M40 440V200a160 160 0 0 1 320 0v240z" />
       <path className="art-arch-line" d="M64 440V204a136 136 0 0 1 272 0v236" />
       <ellipse className="art-shadow" cx="200" cy="404" rx="150" ry="14" />

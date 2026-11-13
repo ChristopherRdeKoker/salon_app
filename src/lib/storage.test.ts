@@ -6,7 +6,7 @@ import { APPOINTMENTS_KEY, createMemoryStore, loadAppointments, saveAppointments
 const serviceIds = new Set(["gel-hands", "brow-wax"]);
 const stylistIds = new Set(["naledi", "ines"]);
 const good: z.infer<typeof appointmentSchema> = {
-  ref: "HNY-ABC-234",
+  ref: "HVL-ABC-234",
   serviceIds: ["gel-hands"],
   stylistId: "naledi",
   date: "2026-11-17",
@@ -51,13 +51,13 @@ describe("loadAppointments", () => {
   });
   it("keeps good appointments and says how many were dropped", () => {
     const bad = [
-      { ...good, ref: "HNY-ABC-235", stylistId: "nobody" },
-      { ...good, ref: "HNY-ABC-236", serviceIds: ["gel-hands", "nope"] },
-      { ...good, ref: "HNY-ABC-237", status: "pending" },
-      { ...good, ref: "HNY-ABC-238", date: "2026-02-30" },
-      { ...good, ref: "HNY-ABC-239", phone: "0820000000" },
-      { ...good, ref: "HNY-ABC-242", startMinutes: 545 },
-      { ...good, ref: "HNY-ABC-243", extra: 1 },
+      { ...good, ref: "HVL-ABC-235", stylistId: "nobody" },
+      { ...good, ref: "HVL-ABC-236", serviceIds: ["gel-hands", "nope"] },
+      { ...good, ref: "HVL-ABC-237", status: "pending" },
+      { ...good, ref: "HVL-ABC-238", date: "2026-02-30" },
+      { ...good, ref: "HVL-ABC-239", phone: "0820000000" },
+      { ...good, ref: "HVL-ABC-242", startMinutes: 545 },
+      { ...good, ref: "HVL-ABC-243", extra: 1 },
       null,
       good,
     ];

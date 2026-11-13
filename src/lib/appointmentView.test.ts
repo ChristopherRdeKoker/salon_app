@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { mapAppointmentView } from "@/lib/appointmentView";
 
 const appointment = {
-  ref: "HNY-ABC-234",
+  ref: "HVL-ABC-234",
   serviceIds: ["gel-hands", "brow-wax"],
   stylistId: "ines",
   date: "2026-11-13",
