@@ -1,0 +1,87 @@
+.day-strip {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0.25rem 0.125rem 0.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 4.75rem;
+  padding: 0.625rem 0.25rem;
+  border: 0.0625rem solid var(--edge);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.2;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.day:hover:not(:disabled) {
+  border-color: var(--brand);
+}
+
+.day.is-selected {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: var(--on-brand);
+}
+
+.day:disabled {
+  background: var(--surface-sunk);
+  color: var(--ink-muted);
+  cursor: not-allowed;
+}
+
+.day-weekday,
+.day-month {
+  font-size: 0.8125rem;
+}
+
+.day-number {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+}
+
+.day-count {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.slots-heading {
+  font-size: 1.25rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slot {
+  width: 100%;
+  min-height: var(--field-height);
+  border: 0.0625rem solid var(--edge-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.slot:hover {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}

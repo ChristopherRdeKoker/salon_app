@@ -1,0 +1,143 @@
+.appointment-page {
+  max-width: 36rem;
+}
+
+.ticket {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 0.0625rem solid var(--edge);
+  box-shadow: var(--shadow-md);
+}
+
+.ticket-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.125rem dashed var(--edge-strong);
+}
+
+.ticket-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--brand-hard);
+}
+
+.ticket-ref {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+}
+
+.ticket-ref span {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ticket-facts {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+}
+
+.ticket-facts dt {
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+}
+
+.ticket-facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.ticket-note {
+  color: var(--ink-muted);
+}
+
+.appointment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.confirm-cancel {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--danger-soft);
+}
+
+.confirm-cancel p {
+  color: var(--danger-hard);
+  font-weight: 600;
+}
+
+.confirm-cancel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.appointment-group {
+  margin-bottom: 2.5rem;
+}
+
+.appointment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.appointment-row {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  border: 0.0625rem solid var(--edge);
+  border-left: 0.25rem solid var(--brand);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.appointment-row:hover {
+  border-color: var(--brand);
+}
+
+.appointment-row.is-cancelled {
+  border-left-color: var(--edge-strong);
+  background: var(--surface-sunk);
+}
+
+.appointment-date {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.appointment-what {
+  font-weight: 600;
+}
+
+.appointment-meta {
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .ticket {
+    padding: 2rem;
+  }
+
+  .ticket-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

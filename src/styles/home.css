@@ -1,0 +1,238 @@
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.05;
+  max-width: 13ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-art {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  justify-self: center;
+}
+
+.art-arch {
+  fill: var(--blush);
+}
+
+.art-arch-line {
+  fill: none;
+  stroke: var(--petal);
+  stroke-width: 1.5;
+}
+
+.art-shadow {
+  fill: var(--surface-sunk);
+}
+
+.art-cap {
+  fill: var(--ink);
+}
+
+.art-cap-band {
+  fill: var(--gold);
+}
+
+.art-bottle {
+  fill: var(--brand);
+}
+
+.art-gloss {
+  fill: none;
+  stroke: var(--gloss);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.art-petal {
+  fill: var(--surface);
+  stroke: var(--petal);
+  stroke-width: 2;
+}
+
+.art-heart {
+  fill: var(--gold);
+}
+
+.art-lash {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.art-dot {
+  fill: var(--petal);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .art-flower {
+    animation: flower-open 1.2s ease-out both;
+  }
+}
+
+@keyframes flower-open {
+  from {
+    opacity: 0;
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team-member {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.team-member h3 {
+  margin: 0;
+}
+
+.team-role {
+  margin: 0 0 0.5rem;
+  color: var(--brand-hard);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.team-text {
+  min-width: 0;
+}
+
+.team-text p:last-child {
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+}
+
+.portrait {
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+}
+
+.portrait-ground {
+  fill: var(--blush);
+}
+
+.portrait-body {
+  fill: var(--brand);
+}
+
+.portrait-neck,
+.portrait-face {
+  fill: var(--skin);
+}
+
+.portrait-hair {
+  fill: var(--ink);
+}
+
+.hours {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 24rem;
+}
+
+.hours th,
+.hours td {
+  padding: 0.5rem 0;
+  border-bottom: 0.0625rem solid var(--edge);
+  text-align: left;
+  font-weight: 400;
+}
+
+.hours td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-page {
+  max-width: 40rem;
+}
+
+.service-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--brand-hard);
+  font-weight: 600;
+}
+
+.service-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 0;
+  border-top: 0.0625rem solid var(--edge);
+  border-bottom: 0.0625rem solid var(--edge);
+}
+
+.service-facts dt {
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+}
+
+.service-facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.service-details {
+  margin: 0 0 2rem;
+  padding-left: 1.25rem;
+}
+
+.service-details li {
+  margin-bottom: 0.375rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero-art {
+    max-width: 24rem;
+  }
+
+  .team {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  }
+
+  .team-member {
+    flex-direction: column;
+  }
+
+  .portrait {
+    width: 7rem;
+    height: 7rem;
+  }
+}

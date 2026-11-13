@@ -1,0 +1,64 @@
+:root {
+  color-scheme: light dark;
+  --background: #fbf5f7;
+  --surface: #ffffff;
+  --surface-sunk: #f4e8ed;
+  --ink: #2d1b26;
+  --ink-muted: #6a5160;
+  --ink-faint: #a48f9b;
+  --edge: #ead9e0;
+  --edge-strong: #a07a8a;
+  --brand: #a12d5c;
+  --brand-hard: #7d1f45;
+  --brand-soft: #fae3ec;
+  --on-brand: #ffffff;
+  --blush: #f6d3df;
+  --petal: #e39ab6;
+  --gold: #e2b04a;
+  --skin: #c48a6a;
+  --gloss: #f7c6d8;
+  --danger: #b42318;
+  --danger-hard: #8f1c13;
+  --danger-soft: #fde8e6;
+  --warning-soft: #fff3d6;
+  --warning-hard: #6b4100;
+  --shadow-sm: 0 0.0625rem 0.125rem rgb(45 27 38 / 0.06);
+  --shadow-md: 0 0.75rem 2rem -0.75rem rgb(125 31 69 / 0.25);
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.75rem;
+  --radius-pill: 62.5rem;
+  --font-body: "Avenir Next", Avenir, "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: Didot, "Bodoni 72", "Bodoni MT", "Noto Serif Display", "Big Caslon", "Hoefler Text", Georgia, serif;
+  --page-max: 72rem;
+  --field-height: 2.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1b1218;
+    --surface: #251a21;
+    --surface-sunk: #2f2029;
+    --ink: #f8ecf1;
+    --ink-muted: #cdb4c1;
+    --ink-faint: #7d6673;
+    --edge: #3f2c37;
+    --edge-strong: #8f6e80;
+    --brand: #f4a6c4;
+    --brand-hard: #f9c8da;
+    --brand-soft: #4a2238;
+    --on-brand: #2a0d1b;
+    --blush: #4a2a3c;
+    --petal: #b8678a;
+    --gold: #d9a441;
+    --skin: #a8715a;
+    --gloss: #f9c8da;
+    --danger: #ff9b91;
+    --danger-hard: #ffc0b9;
+    --danger-soft: #3b1f1c;
+    --warning-soft: #3a2f16;
+    --warning-hard: #f6d48b;
+    --shadow-sm: 0 0.0625rem 0.125rem rgb(0 0 0 / 0.4);
+    --shadow-md: 0 0.75rem 2rem -0.75rem rgb(0 0 0 / 0.6);
+  }
+}
