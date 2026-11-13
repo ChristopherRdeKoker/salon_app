@@ -1,12 +1,12 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const PLAYWRIGHT = process.env.PLAYWRIGHT_MODULE ?? 'playwright';
-const { chromium } = await import(PLAYWRIGHT);
+const { chromium } = await import(path.isAbsolute(PLAYWRIGHT) ? pathToFileURL(PLAYWRIGHT).href : PLAYWRIGHT);
 const DIST = fileURLToPath(new URL('../../dist', import.meta.url));
-const SHOTS = process.env.SHOTS_DIR ?? path.join(process.cwd(), "tests/e2e/out");
+const SHOTS = process.env.SHOTS_DIR ?? fileURLToPath(new URL('out', import.meta.url));
 const PREFIX = '/apps/salon/';
 const REQUIRED_CSP = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests";
 fs.mkdirSync(SHOTS, { recursive: true });
