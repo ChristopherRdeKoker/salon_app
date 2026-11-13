@@ -1,4 +1,4 @@
-# Blushwood: beauty studio booking demo
+# Honeycomb: beauty studio booking demo
 
 A fictional beauty studio in Durban North with nails, lashes and brows, facials and waxing. Browse the price list, choose one or more treatments, pick a therapist and a free time from the diary, and book with a full price breakdown including VAT. View or cancel appointments under My appointments. The studio, therapists, prices and appointments are made up, and bookings are saved in the browser.
 

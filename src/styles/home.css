@@ -74,8 +74,15 @@
   stroke-linecap: round;
 }
 
-.art-dot {
-  fill: var(--petal);
+.art-cell-solid {
+  fill: var(--gold);
+}
+
+.art-cell {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
 }
 
 @media (prefers-reduced-motion: no-preference) {

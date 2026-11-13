@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useAppointments, useClock } from "@/hooks/useAppStores";
 import { cn } from "@/lib/cn";
+import { HexMark } from "@/art/HexMark";
 
 export function SiteHeader() {
   const { appointments } = useAppointments();
@@ -12,9 +13,12 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link to="/" className="wordmark" aria-label="Blushwood, home">
-          <span className="wordmark-name">Blushwood</span>
-          <span className="wordmark-place">Beauty studio, Durban North</span>
+        <Link to="/" className="wordmark" aria-label="Honeycomb, home">
+          <HexMark />
+          <span className="wordmark-text">
+            <span className="wordmark-name">Honeycomb</span>
+            <span className="wordmark-place">Beauty studio, Durban North</span>
+          </span>
         </Link>
         <nav className="main-nav" aria-label="Main">
           <NavLink to="/" end className={homeNavClass}>

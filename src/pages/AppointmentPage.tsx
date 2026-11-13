@@ -40,7 +40,7 @@ export function AppointmentPage() {
       {isNew && <p className="lead">We've saved this in your browser. In a real studio you'd get an SMS and an email now.</p>}
       <section className="ticket" aria-label="Appointment card">
         <div className="ticket-head">
-          <p className="ticket-name">Blushwood</p>
+          <p className="ticket-name">Honeycomb</p>
           <p className="ticket-ref">
             Reference <span data-testid="appointment-ref">{view.ref}</span>
           </p>

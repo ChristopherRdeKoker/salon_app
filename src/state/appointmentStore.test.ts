@@ -51,6 +51,6 @@ describe("appointment store", () => {
     expect(store.create({ ...request, date: "2026-11-12" }, contact, now).problem).toBe(BookingFailureEnum.SlotUnavailable);
   });
   it("reports false when cancelling something that isn't booked", () => {
-    expect(freshStore().store.cancel("BLW-ZZZ-ZZZ")).toBe(false);
+    expect(freshStore().store.cancel("HNY-ZZZ-ZZZ")).toBe(false);
   });
 });

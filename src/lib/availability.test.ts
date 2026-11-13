@@ -13,7 +13,7 @@ const tuesday = "2026-11-17";
 
 function appointmentAt(startMinutes: number, overrides: Partial<z.infer<typeof appointmentSchema>> = {}): z.infer<typeof appointmentSchema> {
   const result: z.infer<typeof appointmentSchema> = {
-    ref: "BLW-AAA-AAA",
+    ref: "HNY-AAA-AAA",
     serviceIds: ["gel-hands"],
     stylistId: "naledi",
     date: tuesday,

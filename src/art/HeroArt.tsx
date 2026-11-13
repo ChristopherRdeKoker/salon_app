@@ -1,6 +1,8 @@
+import { hexPoints } from "@/art/hex";
+
 export function HeroArt() {
   return (
-    <svg className="hero-art" viewBox="0 0 400 440" role="img" aria-label="Illustration of a nail polish bottle, a frangipani flower and a curled lash on a blush arch">
+    <svg className="hero-art" viewBox="0 0 400 440" role="img" aria-label="Illustration of a nail polish bottle, a frangipani flower and a curled lash on a blush arch, with small gold honeycomb cells">
       <path className="art-arch" d="M40 440V200a160 160 0 0 1 320 0v240z" />
       <path className="art-arch-line" d="M64 440V204a136 136 0 0 1 272 0v236" />
       <ellipse className="art-shadow" cx="200" cy="404" rx="150" ry="14" />
@@ -23,9 +25,13 @@ export function HeroArt() {
         <path d="M0 40c30 26 100 26 130 0" />
         <path d="M14 50 4 68M38 58l-4 20M65 61v21M92 58l4 20M116 50l10 18" />
       </g>
-      <circle className="art-dot" cx="92" cy="150" r="5" />
-      <circle className="art-dot" cx="330" cy="200" r="4" />
-      <circle className="art-dot" cx="300" cy="96" r="3" />
+      <g className="art-comb">
+        <polygon className="art-cell-solid" points={hexPoints(80, 146, 13)} />
+        <polygon className="art-cell" points={hexPoints(106, 146, 12)} />
+        <polygon className="art-cell" points={hexPoints(93, 168.5, 12)} />
+        <polygon className="art-cell" points={hexPoints(67, 168.5, 12)} />
+      </g>
+      <polygon className="art-cell" points={hexPoints(334, 210, 8)} />
     </svg>
   );
 }
